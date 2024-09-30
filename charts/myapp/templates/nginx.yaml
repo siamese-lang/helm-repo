@@ -15,7 +15,7 @@ kind: Deployment
 metadata:
   name: nginx
 spec:
-  replicas: 1
+  replicas: {{.Values.nginx.replicaCount}}
   selector:
     matchLabels:
       app: nginx
@@ -28,6 +28,24 @@ spec:
       - name: nginx
         # image: hifrodo/m-dev:nginx_v1
         image: nginx
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+        lifecycle:
+          preStop:
+            exec:
+              command:
+                - "sleep"
+                - "30"        
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          failureThreshold: 3
+                  
         ports:
         - containerPort: 80
         volumeMounts:
