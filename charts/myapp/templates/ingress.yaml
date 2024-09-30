@@ -15,7 +15,7 @@ spec:
   #       - www.frodo.kr
   #     secretName: tls-crt 
   rules:
-  - host: www.abydos.kr
+  - host: www.abydos.store
     http:
       paths:
       - pathType: Prefix
