@@ -3,11 +3,11 @@ entries:
   myapp:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2024-09-30T06:13:41.921477156Z"
+    created: "2024-09-30T06:53:53.108770371Z"
     description: test app
-    digest: d9309bd38d3b33973a034d78b6b033825d7cde28a31923786a6a805b5e18663b
+    digest: 77d9bfae7c3f52ff4d8647168fc4cd8f43c225bfdfa74461f0b9afc5a97d0e97
     name: myapp
     urls:
     - https://siamese-lang.github.io/helm-repo/myapp-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-30T06:13:41.921061189Z"
+generated: "2024-09-30T06:53:53.108357653Z"
